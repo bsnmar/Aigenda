@@ -27,9 +27,9 @@ const TaskCategories: React.FC = () => {
               new Date(new Date().setDate(new Date().getDate() + 14))
         );
       case "anytime":
-        return tasks.filter((task) => task.priority === "Anytime"); // Adjusted to use priority instead of category
+        return tasks.filter((task) => task.priority === "Anytime");
       case "someday":
-        return tasks.filter((task) => task.priority === "Someday"); // Adjusted to use priority instead of category
+        return tasks.filter((task) => task.priority === "Someday");
       default:
         return tasks;
     }
@@ -54,7 +54,6 @@ const TaskCategories: React.FC = () => {
 
   const handleEdit = (taskId: number) => {
     console.log("Edit Task:", taskId);
-    // Implement edit logic
   };
 
   return (
