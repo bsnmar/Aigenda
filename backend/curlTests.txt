@@ -1,0 +1,90 @@
+TASK TESTS
+
+CREATE AREAS
+
+curl -X POST http://127.0.0.1:5000/areas \
+     -H "Content-Type: application/json" \
+     -d '{"name":"Steal the moon"}'
+
+curl -X POST http://127.0.0.1:5000/areas \
+     -H "Content-Type: application/json" \
+     -d '{"name":"Computer Science"}'
+
+CREATE PROJECTS
+
+curl -X POST http://127.0.0.1:5000/projects \
+     -H "Content-Type: application/json" \
+     -d '{"name":"Lunar Blueprint", "area_id":1}'
+
+curl -X POST http://127.0.0.1:5000/projects \
+     -H "Content-Type: application/json" \
+     -d '{"name":"Rocket Heist", "area_id":1}'
+
+curl -X POST http://127.0.0.1:5000/projects \
+     -H "Content-Type: application/json" \
+     -d '{"name":"Shrink Ray Scheme", "area_id":1}'
+
+curl -X POST http://127.0.0.1:5000/projects \
+     -H "Content-Type: application/json" \
+     -d '{"name":"Orbit Diversion", "area_id":1}'
+
+curl -X POST http://127.0.0.1:5000/projects \
+     -H "Content-Type: application/json" \
+     -d '{"name":"Orbit Diversion", "area_id":2}'
+
+curl -X POST http://127.0.0.1:5000/projects \
+     -H "Content-Type: application/json" \
+     -d '{"name":"Orbit Diversion", "area_id":2}'
+
+curl -X POST http://127.0.0.1:5000/projects \
+     -H "Content-Type: application/json" \
+     -d '{"name":"Orbit Diversion", "area_id":2}'
+
+CREATE TASKS
+
+ curl -X POST http://127.0.0.1:5000/tasks \
+     -H "Content-Type: application/json" \
+     -d '{"title":"Measure moon dimensions","description":"Calculate the moon’s diameter and mass", "project_id":1}'
+
+curl -X POST http://127.0.0.1:5000/tasks \
+     -H "Content-Type: application/json" \
+     -d '{"title":"Map lunar surface","description":"Identify landing zones and potential grab points", "project_id":1}'
+
+curl -X POST http://127.0.0.1:5000/tasks \
+     -H "Content-Type: application/json" \
+     -d '{"title":"Consult evil genius","description":"Get advice from a mastermind on stealth tactics", "project_id":1}'
+
+curl -X POST http://127.0.0.1:5000/tasks \
+     -H "Content-Type: application/json" \
+     -d '{"title":"Steal rocket blueprint","description":"Infiltrate a space agency for rocket designs", "project_id":2}'
+
+curl -X POST http://127.0.0.1:5000/tasks \
+     -H "Content-Type: application/json" \
+     -d '{"title":"Assemble rocket parts","description":"Source engines, fuel tanks, and hull materials", "project_id":2}'
+
+curl -X POST http://127.0.0.1:5000/tasks \
+     -H "Content-Type: application/json" \
+     -d '{"title":"Plan Launch Cover Story","description":"Create a fake “science mission” excuse for launch day", "project_id":2}'
+
+curl -X POST http://127.0.0.1:5000/tasks \
+     -H "Content-Type: application/json" \
+     -d '{"title":"Build Prototype Ray","description":"Construct a small-scale shrink ray for testing” excuse for launch day", "project_id":3}'
+
+curl -X POST http://127.0.0.1:5000/tasks \
+     -H "Content-Type: application/json" \
+     -d '{"title":"Test on Dummy Moon","description":"Shrink a moon model to verify the tech works” excuse for launch day", "project_id":3}'
+
+curl -X POST http://127.0.0.1:5000/tasks \
+     -H "Content-Type: application/json" \
+     -d '{"title":"Hide Ray from Heroes","description":"Store the device in a secret lair to avoid detection” excuse for launch day", "project_id":3}'
+
+curl -X POST http://127.0.0.1:5000/tasks \
+     -H "Content-Type: application/json" \
+     -d '{"title":"Deploy Gravity Satellites","description":"Launch satellites to tweak lunar gravitational forces", "project_id":4}'
+
+TASKS WITH NO PROJECT
+
+curl -X POST http://127.0.0.1:5000/tasks \
+     -H "Content-Type: application/json" \
+     -d '{"title":"This is a task with no project","description":"Task with no project"}'
+
